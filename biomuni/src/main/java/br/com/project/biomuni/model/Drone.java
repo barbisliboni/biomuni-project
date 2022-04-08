@@ -2,12 +2,11 @@ package br.com.project.biomuni.model;
 
 import com.sun.istack.NotNull;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-public class WeatherClass {
-
+@Entity
+@Table(name = "drone")
+public class Drone {
     @NotNull
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +22,5 @@ public class WeatherClass {
     private String country;
 
     @NotNull
-    private String status;
+    private boolean status;
 }
